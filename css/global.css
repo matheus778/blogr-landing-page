@@ -1,0 +1,42 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* varíaveis */
+:root {
+  /* primarias */
+  --red-bg: hsl(356, 100%, 66%);
+  --hover-background: hsl(355, 100%, 74%);
+  --headings: hsl(208, 49%, 24%);
+
+  /* neutras */
+  --white-text: hsl(0, 0%, 100%);
+  --footer-text: hsl(240, 2%, 79%);
+  --body: hsl(207, 13%, 34%);
+  --footer-bg: hsl(240, 10%, 16%);
+
+  /* gradiente */
+  --gradiente-red: hsl(13, 100%, 72%);
+  --gradiente-white: hsl(353, 100%, 62%);
+}
+
+body {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.section {
+  width: 100%;
+}
+
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}

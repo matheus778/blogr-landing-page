@@ -1,0 +1,493 @@
+/* 
+font-family: 'Overpass', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+
+/* header */
+#btn-close {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.navbar.show #btn-close {
+  display: initial;
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar.show #btn-menu {
+  opacity: 0;
+  display: none;
+}
+
+#header {
+  background: linear-gradient(var(--gradiente-red), var(--gradiente-white));
+  padding-bottom: 15rem;
+  border-bottom-left-radius: 8rem;
+
+  position: relative;
+  z-index: 99;
+}
+
+#header .container nav {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .container section {
+  margin-top: 5rem;
+  text-align: center;
+  color: var(--white-text);
+}
+
+#header .container section h2 {
+  font-family: 'Overpass', sans-serif;
+  font-size: 3rem;
+}
+
+#header .container section p {
+  margin-top: 2.5rem;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+#header .container .button-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#header .container .button-container a,
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  padding: 0.9rem;
+  border-radius: 80px;
+  color: var(--white-text);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: 'Ubuntu';
+  font-weight: 900;
+  transition: opacity ease-out 0.3s;
+}
+
+.btn-white {
+  background: #eeecec;
+  color: rgb(123, 123, 123);
+}
+
+.btn-red {
+  background: linear-gradient(var(--gradiente-red), var(--gradiente-white));
+  color: white;
+}
+
+#header .container nav img:last-child {
+  transition: 0.3s;
+}
+
+#header .container .button-container a:hover,
+#header .container nav img:last-child:hover,
+.btn:hover,
+.menu li:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#header .container .button-container a:first-child {
+  background-color: var(--white-text);
+  color: var(--red-bg);
+  border: 1px solid var(--white-text);
+}
+
+#header .container .button-container a:last-child {
+  border: 1px solid var(--white-text);
+}
+
+#header #bg-pattern {
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  z-index: -99;
+  left: 0;
+}
+
+/* menu */
+.menu {
+  position: absolute;
+  transform: translateY(-800px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu.show {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'overpass';
+  font-weight: bold;
+  padding: 1rem;
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+
+  transform: translateY(0);
+  transition: 0.3s;
+}
+
+.menu li img {
+  width: 15px;
+}
+
+.menu,
+.menu ul {
+  list-style: none;
+}
+
+.menu.show ul:last-child {
+  color: #5a5757;
+
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.menu.show .index.on ul {
+  opacity: 1;
+  visibility: visible;
+  display: initial;
+}
+
+.menu.show ul li:hover {
+  color: var(--red-bg);
+  opacity: 1 !important;
+}
+
+.menu .index {
+  margin-bottom: 1rem;
+}
+
+.menu.show .login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ilustration-editor */
+#ilustration {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+#ilustration.section .container h2 {
+  font-family: 'overpass';
+  margin-bottom: 2rem;
+}
+
+#ilustration .container-text img {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+#ilustration.section .container p {
+  font-family: 'ubuntu';
+  font-size: 1rem;
+  line-height: 2rem;
+  color: rgb(108, 106, 106);
+}
+
+.text-editor-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* phones */
+#phones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
+  padding-top: 240px;
+  background: var(--headings);
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+  position: relative;
+  padding-bottom: 2rem;
+  z-index: 99;
+}
+
+#phones .container img {
+  top: -150px;
+  left: 0;
+  width: 100%;
+  max-width: 350px;
+  position: absolute;
+}
+
+#phones .container .circle {
+  position: absolute;
+  z-index: -10;
+  top: -70px;
+}
+
+#phones .phones-text {
+  color: white;
+  text-align: center;
+}
+
+#phones .phones-text h2,
+.title {
+  font-family: 'overpass';
+  font-size: 2rem;
+}
+
+#phones .container .phones-text p,
+.text {
+  font-family: 'ubuntu';
+  line-height: 2rem;
+}
+
+.text {
+  color: rgb(108, 106, 106);
+}
+
+/* laptop */
+
+#laptop .container {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#laptop .container > img {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.laptop-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* footer */
+#footer {
+  border-top-right-radius: 90px;
+  margin-top: 2rem;
+  background-color: var(--footer-bg);
+  color: var(--white-text);
+  text-align: center;
+  font-family: 'overpass';
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+
+#footer .container img {
+  margin-bottom: 4rem;
+}
+
+#footer ul {
+  list-style: none;
+  line-height: 1.8rem;
+}
+
+#footer ul li:first-child {
+  font-weight: bold;
+  margin-bottom: 1.3rem;
+}
+
+#footer ul li:last-child {
+  margin-bottom: 2rem;
+}
+
+/* responsive */
+@media (min-width: 1024px) {
+  #btn-menu {
+    display: none;
+  }
+
+  .menu {
+    position: unset;
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .menu div li {
+    color: white;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+
+  .menu div .index ul:last-child {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .menu div .index.open ul:last-child {
+    visibility: visible;
+    opacity: 1;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  .menu div .index.open ul:last-child li {
+    color: black;
+    padding: 5px;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-family: 'overpass';
+  }
+
+  #header #bg-pattern {
+    width: 50%;
+    position: absolute;
+    z-index: -99;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  #ilustration > h2 {
+    margin-top: 8rem;
+  }
+
+  #ilustration .container-text {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #ilustration .container-text img {
+    right: -200px;
+    position: absolute;
+    width: auto;
+    height: 500px;
+  }
+
+  #ilustration .container-text p {
+    width: 60%;
+    text-align: start;
+  }
+
+  #phones {
+    height: min-content;
+    border-radius: 0;
+  }
+
+  #phones .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #phones .container .circle {
+    display: none;
+  }
+  #phones .container img:first-child {
+    width: fit-content;
+    position: unset;
+  }
+
+  #laptop {
+    margin-top: 20rem;
+    margin-bottom: 20rem;
+  }
+  #laptop .container img:first-child {
+    transform: scale(2);
+    position: relative;
+    left: -380px;
+  }
+
+  #laptop .container {
+    display: flex;
+  }
+
+  #laptop .container .laptop-text-container {
+    text-align: start;
+  }
+
+  #footer {
+    border-radius: 0;
+  }
+
+  #footer .container {
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5rem;
+  }
+
+  .attribution a {
+    color: white;
+  }
+
+  .attribution a:last-child {
+    background: red;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    animation: 5s infinite anima;
+  }
+}
+
+@keyframes anima {
+  0% {
+    background-color: rgb(175, 76, 76);
+  }
+
+  25% {
+    background-color: rgb(105, 105, 25);
+  }
+
+  50% {
+    background-color: rgb(78, 78, 110);
+  }
+
+  100% {
+    background: rgb(50, 128, 50);
+  }
+}
