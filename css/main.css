@@ -126,6 +126,11 @@ font-family: 'Ubuntu', sans-serif; */
   visibility: hidden;
 }
 
+.navbar {
+  position: relative;
+  z-index: 99;
+}
+
 .menu.show {
   display: flex;
   opacity: 1;
@@ -142,6 +147,7 @@ font-family: 'Ubuntu', sans-serif; */
   width: 80%;
   margin: 0 auto;
   position: absolute;
+  z-index: 99;
   top: 70px;
   left: 0;
   right: 0;
@@ -460,18 +466,17 @@ font-family: 'Ubuntu', sans-serif; */
     grid-auto-flow: column;
     gap: 5rem;
   }
+}
+.attribution a {
+  color: white;
+}
 
-  .attribution a {
-    color: white;
-  }
-
-  .attribution a:last-child {
-    background: red;
-    padding: 10px;
-    border-radius: 10px;
-    font-weight: bold;
-    animation: 5s infinite anima;
-  }
+.attribution a:last-child {
+  background: red;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  animation: 5s infinite anima;
 }
 
 @keyframes anima {
